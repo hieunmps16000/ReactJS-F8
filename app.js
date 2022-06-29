@@ -226,7 +226,7 @@ const courses = [
     }
   ];
 
-function CoursesList({
+function CourseItem({
     imgUrl,
     title,
     description
@@ -246,7 +246,7 @@ const app = (
             {
                 courses.map(course => {
                     return (
-                        <CoursesList 
+                        <CourseItem
                             imgUrl={course.image_url}
                             title={course.title}  
                             description={course.description}
