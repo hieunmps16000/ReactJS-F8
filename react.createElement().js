@@ -1,3 +1,4 @@
+const root = document.getElementById('root')
 /**
  * Task 1: Create h1 element with DOM Element and React Element
  * >>> 
@@ -8,7 +9,6 @@ let h1Dom = document.createElement('h1');
 
 h1Dom.id = 'h1Dom-id';
 Object.assign(h1Dom.style, {
-    color: 'red',
     backgroundColor: '#e9e9e9',
     display: 'inline-block',
     padding: '10px'
@@ -17,7 +17,7 @@ h1Dom.title = 'Hello';
 h1Dom.className = 'heading';
 h1Dom.innerText = 'Hello guys!';
 
-document.body.appendChild(h1Dom);
+// document.body.appendChild(h1Dom);
 
 
 // React.createElement(type, props, children)
@@ -25,11 +25,9 @@ let h1React = React.createElement('h1', {
     id: 'h1React-id',
     title: 'Hello',
     className: 'heading',
-    color: 'red'
 }, 'Hello guys!')
 
-console.dir(h1Dom);
-console.log('>>> Task 1: ', h1React)
+ReactDOM.render(h1React, root)
 
 /**
  * Task 2: Create ul > li element with DOM Element and React Element
@@ -56,17 +54,17 @@ Object.assign(ulDom.style, {
 ulDom.appendChild(li1Dom);
 ulDom.appendChild(li2Dom);
 
-document.body.appendChild(ulDom);
+// document.body.appendChild(ulDom);
 
 // React
 const ulReact = React.createElement(
     'ul',
-    null,
+    {},
     React.createElement('li', null, 'Javascript'),
     React.createElement('li', null, 'ReactJS'),
 )
 
-console.log('>>> Task 2: ', ulReact)
+// ReactDOM.render(ulReact, root)
 
 
 /**
@@ -79,8 +77,22 @@ console.log('>>> Task 2: ', ulReact)
  */
 
 let task3 = React.createElement(
-    'div', 
-    { className: 'post-item'}, 
-    React.createElement('h2', { title: 'Học React tại F8'}, 'HỌc ReactJS'),
-    React.createElement('h2', null, 'Học ReactJS từ cơ bản đến nâng cao'),
-);
+    'div',
+    {
+        className: 'post-item'
+    },
+    React.createElement(
+        'h2',
+        {
+            title: 'HỌc React tại F8'
+        },
+        'Học ReactJS'
+    ),
+    React.createElement(
+        'p',
+        {},
+        'Học ReactJS từ cơ bản đến nâng cao'
+    )
+)
+
+// ReactDOM.render(task3, root)
