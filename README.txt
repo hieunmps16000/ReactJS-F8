@@ -17,4 +17,13 @@
             Ngoài React-Dom còn có React-Native
 
         3. Tạo thẻ div có id là root. 
-            ReactDom.render(React-Element, Element-Container, callback)
+            ReactDom.render(React-Element, Element-Container, callback
+
+---------------------------------------------------------------------------------------------------------------------------------------------            
+        
+# lesson2: JSX
+
+- JSX: Javascript XML
+- JSX: dùng để viết html trong React
+- Để dùng được JSX cần thông qua Babel
+- Babel là 1 thư viện Javascript dùng để phân tích cú pháp và chuyển đổi cú pháp
