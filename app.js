@@ -224,38 +224,32 @@ const courses = [
       is_pre_order: false,
       is_published: true
     }
-  ];
+];
 
-function CourseItem({
-    imgUrl,
-    title,
-    description
-}) {
-    return (
-        <li className="course-item">
-            <img src={imgUrl} alt={title} />
-            <h2>{title}</h2>
-            <p>{description}</p>
-        </li>
-    )
+function CourseItem({course}) {
+  return (
+    <li>
+      <img src={course.image_url} alt="" />
+      <h2 
+        onClick={() => {
+          alert(course.title)
+        }}
+      >
+        {course.title}
+        </h2>
+      <p>{course.description}</p>
+    </li>
+  )
 }
 
-const app = (
-    <div className="wrapper">
-        <ul className="courses-list">
-            {
-                courses.map(course => {
-                    return (
-                        <CourseItem
-                            imgUrl={course.image_url}
-                            title={course.title}  
-                            description={course.description}
-                        />
-                    )
-                })
-            }
-        </ul>
-    </div>
-)
+const ul = <ul>
+  {
+    courses.map(course => {
+      return (
+        <CourseItem course={course}/>
+      )
+    })
+  }
+</ul>
 
-ReactDOM.render(app, document.getElementById('root'))
+ReactDOM.render(ul, document.getElementById('root'))
