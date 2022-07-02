@@ -226,30 +226,35 @@ const courses = [
     }
 ];
 
-function CourseItem({course}) {
+function CourseItem({course, onClick}) {
   return (
     <li>
-      <img src={course.image_url} alt="" />
-      <h2 
-        onClick={() => {
-          alert(course.title)
-        }}
-      >
-        {course.title}
-        </h2>
+      <img src={course.image_url} alt={course.title} />
+      <h2 onClick={() => onClick(course)}>{course.title}</h2>
       <p>{course.description}</p>
     </li>
   )
 }
 
-const ul = <ul>
-  {
-    courses.map(course => {
-      return (
-        <CourseItem course={course}/>
-      )
-    })
+function App() {
+  const handleClick = (course) => {
+    alert(course.title);
   }
-</ul>
 
-ReactDOM.render(ul, document.getElementById('root'))
+  return (
+    <div className="wrapper">
+      {
+        courses.map(course => {
+          return (
+            <CourseItem 
+              course={course}
+              onClick={handleClick} 
+            />
+          )
+        })
+      }
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
