@@ -1,0 +1,26 @@
+div {
+    margin: 20px 0;
+}
+
+button {
+    margin-right: 10px;
+}
+
+input {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 1px dotted #ddd;
+}
+
+.go-to-top-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    background-color: #71be34;
+}
