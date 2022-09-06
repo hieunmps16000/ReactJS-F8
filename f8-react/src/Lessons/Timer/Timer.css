@@ -1,0 +1,35 @@
+.set-timer-container {
+    margin: 20px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.timer-container {
+    margin: 40px auto 0 auto;
+    width: 900px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 14px rgba(219, 218, 218, 0.4);
+    background-color: rgba(3, 4, 26, 0.712);
+    border-radius: 16px;
+}
+
+.timer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 24px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(56, 56, 56);
+    border-radius: 16px;
+}
+
+.timer-item h1 {
+    color: #fff;
+    font-size: 5rem;
+}

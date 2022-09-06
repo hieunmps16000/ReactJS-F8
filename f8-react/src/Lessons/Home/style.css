@@ -1,0 +1,22 @@
+body {
+    background-image: url('https://wallpaperaccess.com/full/4107751.jpg ');
+    background-size: cover;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent !important;
+    z-index: 1;
+}
+
+.navbar a {
+    color: #fff !important;
+    padding: 0 24px !important;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #fff;
+}
